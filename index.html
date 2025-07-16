@@ -7,12 +7,12 @@
     <meta name="robots" content="index, follow" />
     <meta
       name="description"
-      content="Bienvenue sur le site web de mon portfolio. je suis un développeur front-end spécialisé dans la création de sites avec CMS. Découvrez mes projets et mes compétences."
+      content="Bienvenue sur le site web de mon portfolio. Je suis un développeur web fullstack. Découvrez mes projets et mes compétences."
     />
 
     <!-- Google / Search Engine Tags -->
     <meta itemprop="name" content="Portfolio de Cyril Fauveau">
-    <meta itemprop="description" content="Bienvenue sur le site web de mon portfolio. je suis un développeur front-end spécialisé dans la création de sites avec CMS. Découvrez mes projets et mes compétences.">
+    <meta itemprop="description" content="Bienvenue sur le site web de mon portfolio. Je suis un développeur web fullstack. Découvrez mes projets et mes compétences.">
 
     <!-- Reference screenshot of updated site's header in place of content -->
     <meta itemprop="image" content="assets/images/sharing-card.png">
@@ -20,7 +20,7 @@
     <!-- Facebook Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Portfolio de Cyril Fauveau">
-    <meta property="og:description" content="Bienvenue sur le site web de mon portfolio. je suis un développeur front-end spécialisé dans la création de sites avec CMS. Découvrez mes projets et mes compétences.">
+    <meta property="og:description" content="Bienvenue sur le site web de mon portfolio. Je suis un développeur web fullstack. Découvrez mes projets et mes compétences.">
 
     <!-- Reference screenshot of updated site's header in content -->
     <meta property="og:image" content="assets/images/sharing-card.png">
@@ -28,7 +28,7 @@
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Portfolio de Cyril Fauveau">
-    <meta name="twitter:description" content="Bienvenue sur le site web de mon portfolio. je suis un développeur front-end spécialisé dans la création de sites avec CMS. Découvrez mes projets et mes compétences.">
+    <meta name="twitter:description" content="Bienvenue sur le site web de mon portfolio. Je suis un développeur web fullstack. Découvrez mes projets et mes compétences.">
 
     <!-- Reference screenshot of updated site's header in content -->
     <meta name="twitter:image" content="assets/images/sharing-card.png">
@@ -50,7 +50,7 @@
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
 
-    <title>Portfolio de Cyril Fauveau - Développeur web / Développeur CMS</title>
+    <title>Portfolio de Cyril Fauveau - Développeur web</title>
   </head>
 
   <body>
@@ -228,7 +228,7 @@
                   <li>PhaserJS</li>
                 </ol>
                 <div class="work-links">
-                  <a href="https://johns-escape.com/" target="_blank" rel="noopener" class="link">Accéder au jeu</a>
+                  <a href="#" target="_blank" rel="noopener" class="link">Accéder au jeu</a>
                 </div>
               </div>
               <picture class="work-img">
@@ -323,7 +323,7 @@
             <div class="contact-textbox">
               <strong href="#" class="hire-alert">
                 <span class="indicator"></span>
-                Disponible pour des missions
+                Non disponible actuellement
               </strong>
               <p class="contact-text">
                 En tant que développeur, je créer des sites web adaptés et performants.
@@ -340,7 +340,7 @@
               />
             </div>
             <form action="" class="contact-form" method="post">
-              <p style="text-align:center;"><?php if(isset($message)) { echo $message; } ?></p>
+              <p style="text-align:center;"></p>
               <div class="form-field">
                 <label for="name">Nom*</label>
                 <input type="text" name="name" id="name" required />
@@ -416,26 +416,6 @@
     </footer>
   </body>
 </html>
-
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST["name"];
-    $subject = $_POST["subject"];
-    $email = $_POST["email"];
-    $message = $_POST["message"];
-
-    $to = "contact@cyrilfauveau.fr";
-
-    $headers = "From: $email" . "\r\n";
-    $headers .= "Reply-To: $email" . "\r\n";
-    $headers .= "MIME-Version: 1.0" . "\r\n";
-    $headers .= "Content-Type: text/plain; charset=UTF-8" . "\r\n";
-
-    if (mail($to, $subject, $message, $headers)) {
-        $message = "Votre message a été envoyé avec succès.";
-    } else {
-        $message = "Une erreur s'est produite lors de l'envoi de votre message.";
-    }
 
 } else {
     $message = "Une erreur s'est produite.";
