@@ -877,7 +877,7 @@ body.dark .work-links img {
   block-size: var(--gutter-nano);
   inline-size: var(--gutter-nano);
   border-radius: 50%;
-  background-color: #00aa00;
+  background-color: #aa0000;
   animation: blink 550ms alternate infinite var(--easing);
 }
 
